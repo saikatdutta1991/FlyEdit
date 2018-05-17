@@ -42,6 +42,9 @@
 
             let boxelem = $(document.createRange().createContextualFragment(template));
 
+            //bind enter event on text field
+            boxelem.find('input[type="text"]').on('keypress', enterKeyOntextHandler)
+
             //bind ok button click handler 
             boxelem.find('.ok-btn').on('click', okButtonHandler)
 
@@ -52,6 +55,18 @@
 
 
         }).bind(this)
+
+
+
+        /**
+         * enter key on text field handler
+         */
+        let enterKeyOntextHandler = function (event) {
+            if (event.keyCode == 13) {  // detect the enter key
+                $(this).parent().find('.ok-btn').trigger('click')
+            }
+        }
+
 
 
 
