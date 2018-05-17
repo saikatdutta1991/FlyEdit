@@ -1,0 +1,37 @@
+.fly-edit-box {
+    display: inline-flex;
+    padding: 5px;
+    position: absolute;
+   /*  right: 0px; */
+    top: 0px;
+    background-color: #6c757d;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    z-index: 999;
+}
+
+.fly-edit-box::before{
+    color: #6c757d;
+    border-right: 13px solid;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    display: inline-block;
+    content: '';
+    position: absolute;
+    left: -13px;
+}
+
+.fly-edit-box input[type="text"] {
+    display: inline-block;
+    width: auto;
+}
+
+.fly-edit-box>.buttons-div {
+    display: inline-flex;
+}
+
+.fly-edit-box .ok-btn, .fly-edit-box .cancel-btn
+{
+    margin-left: 5px;
+}
+
