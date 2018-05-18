@@ -32,7 +32,7 @@
 ```javascript
 <script>
 	$(document).ready(function () {
-		$('.flyedit').flyEdit({}, function (event, oldContent, newContent, container) {
+		$('.my-flyedit-cell').flyEdit({}, function (event, oldContent, newContent, container) {
 			console.log(event, oldContent, newContent, container)
 		}, function (event, container) {
 			console.log(event, container)
@@ -40,3 +40,4 @@
 	})
 </script>
 ```
+###### note: container = table cell element, event = raw jquery event, oldContent = old cell value, newContent = new cell value
