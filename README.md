@@ -19,21 +19,24 @@
 - Add specific class name to the table cell(s) which you want to make editable.
 ```html
 <tbody>
-	<tr>
-		<td class="my-flyedit-cell">John</td>
-		<td>Doe</td>
-		<td class="my-flyedit-cell">john@example.com</td>
-	</tr>
+    <tr>
+	<td class="my-flyedit-cell">John</td>
+	<td>Doe</td>
+	<td class="my-flyedit-cell">john@example.com</td>
+    </tr>
+</tbody>
+............
+..............
 ```
 - Now initialize the FlyEdit library followed after importing `flyEdit.js`
 ```javascript
 <script>
-		$(document).ready(function () {
-			$('.flyedit').flyEdit({}, function (event, oldContent, newContent, container) {
-				console.log(event, oldContent, newContent, container)
-			}, function (event, container) {
-				console.log(event, container)
-			});
-		})
+	$(document).ready(function () {
+		$('.flyedit').flyEdit({}, function (event, oldContent, newContent, container) {
+			console.log(event, oldContent, newContent, container)
+		}, function (event, container) {
+			console.log(event, container)
+		});
+	})
 </script>
 ```
