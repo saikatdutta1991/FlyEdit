@@ -44,3 +44,6 @@
 
 - Default editbox event is dobule click on the cell. So now if you double click on those specific cell edit box will be popup.
 ![snap](https://github.com/saikatdutta1991/FlyEdit/blob/master/screenshots/3Cscreencapture-1526648077380.png?raw=true "snap")
+
+## Options
+- 
