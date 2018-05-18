@@ -24,6 +24,7 @@
             ok_btn_custom_classes: '',
             cancel_btn_custom_classes: '',
             textarea_custom_classes: '',
+            boxcontaner_position_relative: true
         }
 
 
@@ -157,6 +158,12 @@
             //boxcontainer element
             let boxContainerElem = $(this)
 
+
+            //make box conatiner position relative
+            if (settings.boxcontaner_position_relative) {
+                boxContainerElem.css({ position: 'relative' })
+            }
+
             //if box already added then return
             if (boxContainerElem.find('.fly-edit-box').length) {
                 return false;
@@ -174,6 +181,9 @@
 
             //add box to container
             boxContainerElem.append(box)
+
+            //after appending child node, find element from parent node and fadein
+            boxContainerElem.find('.fly-edit-box').css('opacity', 0).animate({ 'opacity': 1 }, 500);
 
             //remove click event from container
             boxContainerElem.off(settings.activation_event, activateHandler)
