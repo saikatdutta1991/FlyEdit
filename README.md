@@ -8,7 +8,7 @@
 ## Usage
 - import `.css` and `.js` file inside the html page.
 
-   ```javascript
+```javascript
  <link rel="stylesheet" href="flyEdit.css">
 ```
 ```javascript
@@ -27,7 +27,7 @@
 ```
 - Now initialize the FlyEdit library followed after importing `flyEdit.js`
 ```javascript
-	<script>
+<script>
 		$(document).ready(function () {
 			$('.flyedit').flyEdit({}, function (event, oldContent, newContent, container) {
 				console.log(event, oldContent, newContent, container)
@@ -35,5 +35,5 @@
 				console.log(event, container)
 			});
 		})
-	</script>
+</script>
 ```
