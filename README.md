@@ -3,7 +3,7 @@
 
 ## Screen Shot
 
-![FlyEdit sample screen shot](https://github.com/saikatdutta1991/FlyEdit/blob/master/screenshot.png?raw=true "FlyEdit sample screen shot")
+![FlyEdit sample screen shot](https://github.com/saikatdutta1991/FlyEdit/blob/master/screenshots/screenshot.png?raw=true "FlyEdit sample screen shot")
 
 ## Usage
 - import `.css` and `.js` file inside the html page.
@@ -41,3 +41,9 @@
 </script>
 ```
 ###### note: container = table cell element, event = raw jquery event, oldContent = old cell value, newContent = new cell value
+
+- Default editbox event is dobule click on the cell. So now if you double click on those specific cell edit box will be popup.
+![snap](https://github.com/saikatdutta1991/FlyEdit/blob/master/screenshots/3Cscreencapture-1526648077380.png?raw=true "snap")
+
+## Options
+- 
