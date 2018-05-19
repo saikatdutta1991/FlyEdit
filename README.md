@@ -4,7 +4,9 @@
 ## Screen Shot
 
 ![FlyEdit sample screen shot](https://github.com/saikatdutta1991/FlyEdit/blob/master/screenshots/screenshot.png?raw=true "FlyEdit sample screen shot")
-### On hover pencil icon 
+
+*On hover pencil icon *
+
 ![FlyEdit sample screen shot](https://raw.githubusercontent.com/saikatdutta1991/FlyEdit/master/screenshots/3Cscreencapture-1526724544272.png "FlyEdit sample screen shot")
 
 ## Usage
