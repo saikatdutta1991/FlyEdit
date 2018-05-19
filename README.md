@@ -5,7 +5,7 @@
 
 ![FlyEdit sample screen shot](https://github.com/saikatdutta1991/FlyEdit/blob/master/screenshots/screenshot.png?raw=true "FlyEdit sample screen shot")
 
-*On hover pencil icon *
+*on hover pencil  icon(need to add fontawesome css)*
 
 ![FlyEdit sample screen shot](https://raw.githubusercontent.com/saikatdutta1991/FlyEdit/master/screenshots/3Cscreencapture-1526724544272.png "FlyEdit sample screen shot")
 
