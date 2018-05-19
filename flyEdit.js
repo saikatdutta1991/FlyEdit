@@ -24,7 +24,10 @@
             ok_btn_custom_classes: '',
             cancel_btn_custom_classes: '',
             textarea_custom_classes: '',
-            boxcontaner_position_relative: true
+            boxcontaner_position_relative: true,
+            is_edit_btn: true,
+            edit_btn_color: 'blue',
+            edit_btn_template: '<i class="fa fa-pencil fa-2" aria-hidden="true"></i>'
         }
 
 
@@ -158,12 +161,6 @@
             //boxcontainer element
             let boxContainerElem = $(this)
 
-
-            //make box conatiner position relative
-            if (settings.boxcontaner_position_relative) {
-                boxContainerElem.css({ position: 'relative' })
-            }
-
             //if box already added then return
             if (boxContainerElem.find('.fly-edit-box').length) {
                 return false;
@@ -192,6 +189,31 @@
 
 
 
+        /** 
+         * edit button click handler
+        */
+        let editButtonClickHandler = function (event) {
+            $(this).parent().trigger(settings.activation_event)
+        }
+
+
+        /**
+         * get edit icon element
+         */
+        let editBtn = null;
+        let editIconElement = function () {
+
+            let template = `<span class="flyedit-edit-btn" style="color:${settings.edit_btn_color}">
+                                ${settings.edit_btn_template}
+                            </span>`;
+            editBtn = $(document.createRange().createContextualFragment(template));
+
+            //binding click event on edit button
+            editBtn.children().on('click', editButtonClickHandler)
+
+            return editBtn;
+
+        }.bind(this)
 
 
 
@@ -203,6 +225,29 @@
 
         //bind activate handler with activation_event
         this.on(settings.activation_event, activateHandler);
+
+        //make box conatiner position relative
+        if (settings.boxcontaner_position_relative) {
+            this.css({ position: 'relative' })
+        }
+
+
+        if (settings.is_edit_btn) {
+
+            this.append(editIconElement())
+
+            //hide show on hover
+
+            this.each((index) => {
+
+                $(this[index]).hover(() => {
+                    $(this[index]).children('.flyedit-edit-btn').css('opacity', 0).animate({ 'opacity': 1 }, 100)
+                }, () => {
+                    $(this[index]).children('.flyedit-edit-btn').css('opacity', 1).animate({ 'opacity': 0 }, 100)
+                })
+            })
+
+        }
 
         /** main logic ends*/
 

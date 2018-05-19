@@ -35,3 +35,14 @@
     margin-left: 5px;
 }
 
+.flyedit-edit-btn {
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+    right: 20px;
+    z-index: 999;
+}
+
+
+
